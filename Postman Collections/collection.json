@@ -309,6 +309,38 @@
 				},
 				{
 					"name": "Delete hero by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1b0d4c9c-7666-4ca3-8c9a-dba50703529f",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body contains error message\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Bad Request\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "40985e62-ddde-432f-b8e4-8fe47bd8b9a6",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "e3182d04-ab90-4997-b305-3111cd3467b5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -316,7 +348,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{BaseURI}}/"
+						"url": "{{BaseURI}}/superheroes/{{idHeros}}"
 					},
 					"response": []
 				}

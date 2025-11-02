@@ -55,7 +55,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{BaseURI}}/superheroe"
+						"url": "{{BaseURI}}/superhero"
 					},
 					"response": []
 				},
@@ -170,7 +170,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BaseURI}}/superhero"
 					},
 					"response": []
 				}

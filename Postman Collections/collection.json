@@ -55,7 +55,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{BaseURI}}/superheroes"
+						"url": "{{BaseURI}}/superhero"
 					},
 					"response": []
 				},

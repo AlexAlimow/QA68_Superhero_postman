@@ -9,14 +9,19 @@
 			"name": "negative",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Get superheroes before create",
 					"id": "05830d5c-ea94-4e4a-941b-0c9c04e8f8be",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"birthDate\": \"2019-02-21\",\r\n  \"city\": \"New York\",\r\n  \"fullName\": \"Hawkeye\",\r\n  \"gender\": \"F\",\r\n  \"mainSkill\": \"Magic\",\r\n  \"phone\": \"+74998884433\"\r\n}"
+						},
+						"url": "{{BaseURI}}/superheroes"
 					},
 					"response": []
 				}

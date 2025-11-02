@@ -170,7 +170,17 @@
 							"script": {
 								"id": "f4283070-7030-43a5-93ac-94d46599fbff",
 								"exec": [
-									"pm.test"
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Response time is less than 200ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"        });\r",
+									"\r",
+									"pm.test(\"Response body contains error message\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Not Found\");\r",
+									"    });"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -180,7 +190,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "4baacb8d-876b-417a-bafa-ed45f5d09347",
+								"id": "e3f8e384-63f9-4b03-bf25-b28be9eb61bf",
 								"exec": [],
 								"type": "text/javascript"
 							}

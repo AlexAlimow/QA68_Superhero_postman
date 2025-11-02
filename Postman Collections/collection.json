@@ -257,7 +257,59 @@
 				},
 				{
 					"name": "Get super hero by id after modify",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f8b23f16-7f54-4f11-9533-49e2fd66dd18",
+								"exec": [
+									"pm.test(\"Status code is 400 \", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Response body contains the correct message\", function () { \r",
+									"    pm.expect(pm.response.text()).to.include(\"Superhero with id '8' was not found\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "838a4f27-8a2a-45e9-8245-05b3848c5661",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "3d5cf51a-b6f4-4587-8478-fe825ac652f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURI}}/superheroes/{{idHero}}"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "e3182d04-ab90-4997-b305-3111cd3467b5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},

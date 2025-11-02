@@ -308,14 +308,15 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Delete hero by id",
 					"id": "e3182d04-ab90-4997-b305-3111cd3467b5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": "{{BaseURI}}/"
 					},
 					"response": []
 				}

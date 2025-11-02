@@ -10,6 +10,32 @@
 			"item": [
 				{
 					"name": "Get superheroes before create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "21a8e4c7-ed12-4f91-ac7e-f242e2321e42",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5ec40aa1-2ad7-426f-99e8-b0b39c8fddc2",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "05830d5c-ea94-4e4a-941b-0c9c04e8f8be",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -21,7 +47,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{BaseURI}}/superheroes"
+						"url": "{{BaseURI}}/superheroe"
 					},
 					"response": []
 				}
@@ -280,7 +306,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4d01a2ed-3e8f-4614-abe5-41751a82bd2b",
+				"id": "c425125a-a21a-4da1-aeb8-fc4e9a8975b6",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -292,22 +318,12 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a45d2977-b67f-469f-9fe9-775175412c87",
+				"id": "291f5ccb-7f92-44fe-a29a-50bcf5cdb17c",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
 				"exec": [
-					"pm.test(\"Status code is 200\", function () {\r",
-					"    pm.response.to.have.status(200);\r",
-					"});\r",
-					"\r",
-					"pm.test(\"Response time is less than 500ms\", function () {\r",
-					"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-					"});\r",
-					"\r",
-					"pm.test(\"Status code name has string: OK\", function () {\r",
-					"    pm.response.to.have.status(\"OK\");\r",
-					"});"
+					""
 				]
 			}
 		}

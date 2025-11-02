@@ -76,7 +76,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Response body contains error message\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"Not Found\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Incorrect request data\");\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -87,7 +87,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "2fc1c9f7-5269-4567-b362-cef5f0242837",
+								"id": "09ec5eba-5798-4fea-9682-c585e026c95c",
 								"exec": [],
 								"type": "text/javascript"
 							}

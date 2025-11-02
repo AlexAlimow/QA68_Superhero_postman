@@ -114,14 +114,15 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Get super hero by id",
 					"id": "e0917a46-3723-42d4-aaed-a16ea4464266",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BaseURI}}/supe"
 					},
 					"response": []
 				}

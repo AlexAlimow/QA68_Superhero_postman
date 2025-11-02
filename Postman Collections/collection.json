@@ -16,13 +16,19 @@
 							"script": {
 								"id": "21a8e4c7-ed12-4f91-ac7e-f242e2321e42",
 								"exec": [
-									"pm.test(\"Status code is 404\", function () {\r",
-									"    pm.response.to.have.status(404);\r",
-									"});\r",
-									"\r",
-									"\r",
-									"\r",
-									""
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Status code name has string: No message available\", function () {",
+									"    const body = pm.response.json();",
+									"    pm.expect(body).to.have.property(\"message\");",
+									"    pm.expect(body.message).to.include(\"No message available\");",
+									"});"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -32,7 +38,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "5effec60-c5a0-4261-972f-5330c593936c",
+								"id": "4554e124-323c-43ad-94e6-8ba11c9180f0",
 								"exec": [],
 								"type": "text/javascript"
 							}
@@ -50,6 +56,18 @@
 							"raw": ""
 						},
 						"url": "{{BaseURI}}/superheroe"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "5d969f9a-5152-447a-aab2-e35ef1e7c707",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}

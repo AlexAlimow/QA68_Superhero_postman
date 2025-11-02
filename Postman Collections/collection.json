@@ -20,6 +20,8 @@
 									"    pm.response.to.have.status(404);\r",
 									"});\r",
 									"\r",
+									"\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript",
@@ -30,7 +32,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "5ec40aa1-2ad7-426f-99e8-b0b39c8fddc2",
+								"id": "5effec60-c5a0-4261-972f-5330c593936c",
 								"exec": [],
 								"type": "text/javascript"
 							}

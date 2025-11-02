@@ -299,7 +299,43 @@
 					"response": []
 				}
 			],
-			"id": "2eece48f-c1f0-4fa3-be74-d907347ada28"
+			"id": "2eece48f-c1f0-4fa3-be74-d907347ada28",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2a9f15f4-c53e-4ba8-ab40-7195829eb43b",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "00b0946f-5949-4b1e-9434-707b23d60690",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string: OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						]
+					}
+				}
+			]
 		}
 	],
 	"event": [

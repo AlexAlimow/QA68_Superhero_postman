@@ -163,7 +163,7 @@
 					"response": []
 				},
 				{
-					"name": "Get super hroes after create",
+					"name": "Get super heroes after create",
 					"event": [
 						{
 							"listen": "test",
@@ -203,7 +203,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseURI}}/superhero"
+						"url": "{{BaseURI}}/superheroes"
 					},
 					"response": []
 				},

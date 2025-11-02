@@ -61,6 +61,38 @@
 				},
 				{
 					"name": "Create super hero",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "49483cc9-fec3-46d8-ad3b-f62fcad6502c",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body contains error message\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1f60ea04-c657-4437-8f26-150c62616589",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "5d969f9a-5152-447a-aab2-e35ef1e7c707",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -78,6 +110,18 @@
 							}
 						},
 						"url": "{{BaseURI}}/superhero"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "e0917a46-3723-42d4-aaed-a16ea4464266",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}

@@ -208,13 +208,13 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Modify heroes city",
 					"id": "31881eb5-7dfc-4d5d-abf4-4d16e85e8e57",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": []
 					},
 					"response": []

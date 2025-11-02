@@ -60,14 +60,24 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Create super hero",
 					"id": "5d969f9a-5152-447a-aab2-e35ef1e7c707",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"birthDate\": \"2019-02-21\",\r\n  \"citys\": \"New York\",\r\n  \"fullName\": \"Hawkeye\",\r\n  \"gender\": \"F\",\r\n  \"mainSkill\": \"Magic\",\r\n  \"phone\": \"+74998884433\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseURI}}/superhero"
 					},
 					"response": []
 				}

@@ -256,7 +256,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Get super hero by id after modify",
 					"id": "3d5cf51a-b6f4-4587-8478-fe825ac652f6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true

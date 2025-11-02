@@ -164,6 +164,28 @@
 				},
 				{
 					"name": "Get super hroes after create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f4283070-7030-43a5-93ac-94d46599fbff",
+								"exec": [
+									"pm.test"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4baacb8d-876b-417a-bafa-ed45f5d09347",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "b2862223-f092-4fae-bf1e-24f08fee1ae4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true

@@ -7,7 +7,20 @@
 	"item": [
 		{
 			"name": "negative",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "05830d5c-ea94-4e4a-941b-0c9c04e8f8be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "4f84eb41-7759-40b6-a792-af411945a5c0"
 		},
 		{

@@ -163,7 +163,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Get super hroes after create",
 					"id": "b2862223-f092-4fae-bf1e-24f08fee1ae4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true

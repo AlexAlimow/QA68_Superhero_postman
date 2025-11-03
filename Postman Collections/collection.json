@@ -9,7 +9,7 @@
 			"name": "negative",
 			"item": [
 				{
-					"name": "Get superheroes before create",
+					"name": "Get superheroes with wrong endpoint",
 					"event": [
 						{
 							"listen": "test",

@@ -357,7 +357,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{BaseURI}}/superheroes/ii"
+						"url": "{{BaseURI}}/superheroes/ii1999"
 					},
 					"response": []
 				}

@@ -88,14 +88,19 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "09ec5eba-5798-4fea-9682-c585e026c95c",
-								"exec": [],
-								"type": "text/javascript"
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
 					"id": "5d969f9a-5152-447a-aab2-e35ef1e7c707",
 					"protocolProfileBehavior": {
-						"disableBodyPruning": true
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
 					},
 					"request": {
 						"method": "POST",
@@ -336,8 +341,12 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "40985e62-ddde-432f-b8e4-8fe47bd8b9a6",
-								"exec": [],
-								"type": "text/javascript"
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
@@ -348,7 +357,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{BaseURI}}/superheroes/{{idHeros}}"
+						"url": "{{BaseURI}}/superheroes/ii"
 					},
 					"response": []
 				}

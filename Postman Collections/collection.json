@@ -60,7 +60,7 @@
 					"response": []
 				},
 				{
-					"name": "Create super hero",
+					"name": "Create super hero without city",
 					"event": [
 						{
 							"listen": "test",
